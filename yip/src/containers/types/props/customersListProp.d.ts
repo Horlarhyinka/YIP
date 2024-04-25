@@ -1,0 +1,1 @@
+export interface CustomersListProp{details: Details[], reference: Coordinate, handleDeleteDetail: Function, zoomInto: Function}

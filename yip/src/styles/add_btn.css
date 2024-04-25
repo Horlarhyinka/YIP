@@ -1,0 +1,26 @@
+.add-btn{
+    display: inline-block;
+    border-radius: 2px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.912);
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.064);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.add-btn .icn{
+    font-size: 18px;
+    color: red;
+    display: inline-block;
+    margin: 5px;
+   position: relative;
+   top: 8px;
+
+}
+.add-btn span{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    margin: 5px;
+}

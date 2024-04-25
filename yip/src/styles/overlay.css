@@ -1,0 +1,18 @@
+.overlay{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 420px);
+    height: 90vh;
+    z-index: 1;
+
+}
+
+@media screen and (max-width:975px){
+    .overlay{
+        width: 95%;
+        height: 90vh;
+    }
+}

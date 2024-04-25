@@ -1,0 +1,26 @@
+.map{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.5;
+    height: 90vh;
+    margin: 0px;
+    max-width: 950px;
+}
+
+.map-wrapper{
+    display: block;
+    float: left;
+    width: calc(100% - 420px);
+}
+
+
+@media screen and (max-width: 975px){
+    /* div{
+        width: 100%;
+    } */
+    .map-wrapper{
+        display: inline-block;
+        clear: both;
+        width: 95%; 
+    }
+}
