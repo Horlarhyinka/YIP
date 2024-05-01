@@ -6,7 +6,6 @@ import mongoose from "mongoose";
 
 export const createUser = async(req: Request, res: Response)=>{
     const validateRes = validator.validateNewCustomerPayload(req.body)
-    console.log
     if(validateRes.error)return res.status(400).json({message: validateRes.error.message})
     const user = await userModel.create({...req.body})
     return res.status(201).json(user)

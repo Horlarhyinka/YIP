@@ -16,7 +16,7 @@ const NewPin = (props: {handleCreateNewPin: Function, coord: Coordinate})=>{
     const validate = (obj: object)=>Joi.object({
         firstName: Joi.string().required().error(()=>Error("enter a valid first name")),
         lastName: Joi.string().required().error(()=>Error("enter a valid last name")),
-        email: Joi.string().required().error(()=>Error("enter a valid email address")),
+        email: Joi.string().required().regex(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/).error(()=>Error("enter a valid email address")),
         tel: Joi.string().regex(/^\+?[1-9][0-9]{7,14}$/).error(()=>Error("enter a valid telephone"))
     }).validate(obj)
 
@@ -32,7 +32,7 @@ const NewPin = (props: {handleCreateNewPin: Function, coord: Coordinate})=>{
     function handleSubmit(e: any){
         e.preventDefault()
         const firstName = firstNameRef.current!.value
-        const lastName = firstNameRef.current!.value
+        const lastName = lastNameRef.current!.value
         const email = emailRef.current!.value
         const tel = telRef.current!.value
 
