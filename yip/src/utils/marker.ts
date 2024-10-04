@@ -1,6 +1,5 @@
-import { Coordinate, Details, Point } from "../containers/types/props/mapProps"
+import { Details } from "../containers/types/props/mapProps"
 import { marker_path } from "./factory"
-import { MapState } from "../containers/types/states/mapState"
 
 
 export function addMarker(position: any, title: string, map: any, maps: any, info: Details | undefined, isPointer: boolean = false){
@@ -20,7 +19,7 @@ export function addMarker(position: any, title: string, map: any, maps: any, inf
     <p class="tel">telephone: ${info.tel}</p>
     </div>`
     infoWindow.setContent(infoContent)
-    marker.addListener("click", (e: any)=>{
+    marker.addListener("click", (_: any)=>{
     infoWindow.open(map, marker)
     })
     }
