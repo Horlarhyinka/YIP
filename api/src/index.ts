@@ -24,7 +24,6 @@ function wakeServer(interval: number) {
   setInterval(async () => {
     try {
       await fetch(BASE_URL + "/check");
-      console.log("woke server up...");
     } catch (err) {
       console.log(err);
     }
